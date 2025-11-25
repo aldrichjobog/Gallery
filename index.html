@@ -53,9 +53,17 @@
         for (var i = 0; i < galleryItems.length; i++) {
             var item = galleryItems[i];
 
+            var icon = '';
+            if(item.category === 'pirate'){
+                icon = '<img src="images/jollyroger.png" class="icon" alt="pirate icon">';
+            } else {
+                icon = '<img src="images/marine-emblem.png" class="icon" alt="marine icon">';
+            }
+
             var card = `
                 <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card my-3 shadow-sm gallery-card">
+                    <div class="card my-3 shadow-sm gallery-card ${item.category}">
+                        ${icon}
                         <img src="${item.image}" class="card-img-top" alt="${item.title}">
                         <div class="card-body">
                             <h5 class="card-title">${item.title}</h5>
