@@ -2,7 +2,7 @@
 .hero-section {
     position: relative;
     height: 80vh;
-    background-image: url('images/onepiece-hero.jpg'); /* replace with your hero img */
+    background-image: url('images/onepiece-hero.png'); /* Replace with your hero PNG */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -17,23 +17,37 @@
     text-align: center;
 }
 
-/* CARD IMAGE */
-.card-img-top {
-    height: 380px;
-    object-fit: cover;
+/* CARD STYLING — Works for PNGs of any size */
+.gallery-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* ensures uniform card height */
 }
 
-/* CARD HOVER */
+.gallery-card img {
+    width: 100%;
+    height: 320px; /* card image height */
+    object-fit: contain; /* shows full PNG without cropping */
+    background-color: #111; /* good for transparent PNGs */
+    border-radius: 10px 10px 0 0;
+}
+
+/* CARD BODY */
+.gallery-card .card-body {
+    flex-grow: 1;
+}
+
+/* CARD HOVER EFFECT */
 .card {
     transition: 0.3s;
 }
 
 .card:hover {
     transform: scale(1.03);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* WARNING SECTION */
+/* DISCLAIMER SECTION */
 .warning-full {
     background: #1b1b1b;
     padding: 30px 0;
@@ -42,3 +56,4 @@
 .warning-full p {
     opacity: 0.9;
 }
+
