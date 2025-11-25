@@ -6,72 +6,108 @@
     background-image: url('images/onepiece-hero.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-blend-mode: overlay;
-    background-color: rgba(0, 51, 102, 0.4); 
 }
 
 .hero-section .overlay {
     background-color: rgba(0, 0, 0, 0.55);
-    padding: 40px;
-    border-radius: 10px;
+    padding: 50px 40px;
+    border-radius: 15px;
     text-align: center;
+    border: 2px solid gold;
+}
+
+/* Section Titles */
+h2 {
+    font-family: 'Pirata One', cursive;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title-icon {
+    width: 40px;
+    height: 40px;
 }
 
 /* CARD STYLING */
 .gallery-card {
     display: flex;
     flex-direction: column;
-    height: 100%; 
+    height: 100%;
     position: relative;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.gallery-card img {
+/* Image Container */
+.gallery-card .img-container {
     width: 100%;
-    height: 320px;
-    object-fit: contain; 
+    height: 250px; /* fixed height for uniform cards */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #111;
+}
+
+.gallery-card .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* scales image to fit container without cropping */
+    object-position: center; /* centers the image */
 }
 
 /* Pirate vs Marine backgrounds */
 .gallery-card.pirate {
-    background-color: #f5e1c0; 
+    background: linear-gradient(180deg, #f5e1c0, #ffd69f);
     border: 2px solid #d4a373;
 }
 
 .gallery-card.marine {
-    background-color: #e0f0ff; 
+    background: linear-gradient(180deg, #e0f0ff, #c0e0ff);
     border: 2px solid #5b8fd1;
 }
 
-/* Card hover effect */
-.card {
-    transition: 0.3s;
-}
-
-.card:hover {
+/* Card hover */
+.gallery-card:hover {
     transform: scale(1.05) rotate(-1deg);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
 }
 
 /* Top-right icon */
 .card .icon {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 32px;
-    height: 32px;
-    opacity: 0.8;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
 }
 
-/* CARD BODY */
+/* Card Body */
 .gallery-card .card-body {
     flex-grow: 1;
+    background: rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+/* Bounty badge for pirates */
+.gallery-card.pirate .card-body::after {
+    content: attr(data-bounty);
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: gold;
+    color: black;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.8rem;
 }
 
 /* DISCLAIMER SECTION */
