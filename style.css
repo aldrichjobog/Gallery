@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     background-blend-mode: overlay;
-    background-color: rgba(0, 51, 102, 0.4); /* ocean tint */
+    background-color: rgba(0, 51, 102, 0.4); 
 }
 
 .hero-section .overlay {
@@ -40,12 +40,12 @@
 
 /* Pirate vs Marine backgrounds */
 .gallery-card.pirate {
-    background-color: #f5e1c0; /* parchment */
+    background-color: #f5e1c0; 
     border: 2px solid #d4a373;
 }
 
 .gallery-card.marine {
-    background-color: #e0f0ff; /* light blue */
+    background-color: #e0f0ff; 
     border: 2px solid #5b8fd1;
 }
 
