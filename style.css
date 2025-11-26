@@ -1,3 +1,14 @@
+/* PAGE BACKGROUND — simple One Piece themed */
+.background-theme {
+    background-image: 
+        url("images/map-texture.png"),
+        url("images/waves-pattern.png");
+    background-size: cover, 300px;
+    background-repeat: repeat, repeat;
+    padding: 40px 0;
+    border-top: 5px solid #c49b4f;
+}
+
 /* HERO SECTION */
 .hero-section {
     position: relative;
@@ -46,7 +57,7 @@ h2 {
 /* Image Container */
 .gallery-card .img-container {
     width: 100%;
-    height: 250px; /* fixed height for uniform cards */
+    height: 250px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -57,8 +68,8 @@ h2 {
 .gallery-card .img-container img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* scales image to fit container without cropping */
-    object-position: center; /* centers the image */
+    object-fit: contain;
+    object-position: center;
 }
 
 /* Pirate vs Marine backgrounds */
@@ -72,7 +83,7 @@ h2 {
     border: 2px solid #5b8fd1;
 }
 
-/* Card hover */
+/* Hover effect */
 .gallery-card:hover {
     transform: scale(1.05) rotate(-1deg);
     box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
@@ -87,16 +98,16 @@ h2 {
     height: 40px;
 }
 
-/* Card Body */
+/* Description box */
 .gallery-card .card-body {
     flex-grow: 1;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.08);
     padding: 15px;
     text-align: center;
     position: relative;
 }
 
-/* Bounty badge for pirates */
+/* Bounty label (Pirates only) */
 .gallery-card.pirate .card-body::after {
     content: attr(data-bounty);
     position: absolute;
@@ -110,7 +121,7 @@ h2 {
     font-size: 0.8rem;
 }
 
-/* DISCLAIMER SECTION */
+/* DISCLAIMER */
 .warning-full {
     background: #1b1b1b;
     padding: 30px 0;
