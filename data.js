@@ -16,7 +16,7 @@ var galleryItems = [
     { category: "pirate", image: "images/kid.png", title: "Eustass Kid", description: "Bounty: 3,000,000,000 | Fearless magnetic user." },
     { category: "pirate", image: "images/shanks.png", title: "Shanks", description: "Bounty: 4,048,900,000 | Yonko with unmatched haki." },
     { category: "pirate", image: "images/blackbeard.png", title: "Marshall D. Teach", description: "Bounty: 3,996,000,000 | Only man with 2 devil fruits." },
-    { category: "pirate", image: "images/ace.png", title: "Portgas D. Ace", description: "Bounty: 550,000,000 | Fire fist Ace." },
+    { category: "pirate", image: "images/ace.png", title: "Portgas D. Ace", description: "Bounty: 550,000,000 | Fire fist Ace, Son of Pirate King Gol D. Roger." },
     { category: "pirate", image: "images/boa.png", title: "Boa Hancock", description: "Bounty: 1,659,000,000 | Pirate Empress." }
 ];
 

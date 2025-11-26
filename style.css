@@ -1,20 +1,19 @@
-/* PAGE BACKGROUND — simple One Piece themed */
+/* Background with reduced opacity */
 .background-theme {
-    background-image: 
-        url("images/map-texture.png"),
-        url("images/waves-pattern.png");
-    background-size: cover, 300px;
-    background-repeat: repeat, repeat;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
+        url("images/map-texture.png");
+    background-size: cover;
+    background-repeat: repeat;
     padding: 40px 0;
     border-top: 5px solid #c49b4f;
 }
 
 /* HERO SECTION */
 .hero-section {
-    position: relative;
     width: 100%;
     height: 80vh;
-    background-image: url('images/onepiece-hero.png');
+    background-image: url("images/onepiece-hero.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -26,53 +25,40 @@
     background-color: rgba(0, 0, 0, 0.55);
     padding: 50px 40px;
     border-radius: 15px;
-    text-align: center;
     border: 2px solid gold;
+    text-align: center;
 }
 
-/* Section Titles */
-h2 {
-    font-family: 'Pirata One', cursive;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
+/* Title Icons */
 .title-icon {
     width: 40px;
     height: 40px;
 }
 
-/* CARD STYLING */
+/* Card Styles */
 .gallery-card {
-    display: flex;
     flex-direction: column;
-    height: 100%;
-    position: relative;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: 0.3s;
 }
 
-/* Image Container */
 .gallery-card .img-container {
     width: 100%;
-    height: 250px;
-    overflow: hidden;
+    height: 250px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #111;
+    overflow: hidden;
+    background: #111;
 }
 
 .gallery-card .img-container img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center;
 }
 
-/* Pirate vs Marine backgrounds */
 .gallery-card.pirate {
     background: linear-gradient(180deg, #f5e1c0, #ffd69f);
     border: 2px solid #d4a373;
@@ -83,50 +69,70 @@ h2 {
     border: 2px solid #5b8fd1;
 }
 
-/* Hover effect */
 .gallery-card:hover {
     transform: scale(1.05) rotate(-1deg);
     box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
 }
 
-/* Top-right icon */
-.card .icon {
+/* Pirate/Marine Icon */
+.icon {
     position: absolute;
     top: 10px;
     right: 10px;
     width: 40px;
-    height: 40px;
 }
 
-/* Description box */
-.gallery-card .card-body {
-    flex-grow: 1;
-    background: rgba(0,0,0,0.08);
-    padding: 15px;
-    text-align: center;
-    position: relative;
-}
-
-/* Bounty label (Pirates only) */
+/* Bounty label */
 .gallery-card.pirate .card-body::after {
     content: attr(data-bounty);
     position: absolute;
     top: 8px;
     left: 8px;
     background: gold;
-    color: black;
     padding: 2px 8px;
     border-radius: 5px;
     font-weight: bold;
     font-size: 0.8rem;
 }
 
-/* DISCLAIMER */
-.warning-full {
-    background: #1b1b1b;
-    padding: 30px 0;
+/* FOOTER WITH WAVES */
+.footer {
+    position: relative;
+    background: url("images/grandline-map.png");
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    border-top: 4px solid gold;
 }
 
-.warning-full p {
-    opacity: 0.9;
+.footer img {
+    width: 60px;
+    margin-bottom: 10px;
 }
+
+/* Animated Waves */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: url("images/waves.png");
+    background-size: 1000px 100px;
+    opacity: 0.45;
+    animation: waveAnim 6s linear infinite;
+    z-index: 1;
+}
+
+#wave2 { opacity: 0.30; bottom: 10px; animation-duration: 8s; }
+#wave3 { opacity: 0.20; bottom: 20px; animation-duration: 10s; }
+#wave4 { opacity: 0.15; bottom: 30px; animation-duration: 14s; }
+
+@keyframes waveAnim {
+    from { background-position-x: 0; }
+    to { background-position-x: -1000px; }
+}
+
